@@ -5,6 +5,7 @@ module.exports = {        //注意这里是exports不是export
         path: __dirname + "/build",//打包后的js文件存放的地方
         filename: "bundle.js"//打包后的js文件名
     },
+    devtool:'source-map',
     module:{
         rules:[
             {
@@ -15,6 +16,12 @@ module.exports = {        //注意这里是exports不是export
                     options:{
                         presets:['es2015','react']
                     }
+                }
+            },
+            {
+                test:/\.css$/,
+                use:{
+                    loader:'style!css'
                 }
             }
         ]
