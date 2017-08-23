@@ -1,7 +1,16 @@
 import React from "react";
+import Bar from "./Bar/Bar.js";
+
 class App extends React.Component{
+    constructor(){
+        super();
+    }
     render(){
-        return <h1>Hello world!</h1>;
+        return <div>
+            <Bar></Bar>
+            <Bar></Bar>
+            <Bar></Bar>
+        </div>
     }
 }
 
